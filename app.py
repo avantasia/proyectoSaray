@@ -1,5 +1,6 @@
 from flask import *
 from scripts.script1 import *
+from scripts.script2 import *
 
 app = Flask(__name__)
 
@@ -22,8 +23,13 @@ def script2():
 
 @app.route('/script2resultado',methods=['POST','GET'])
 def script2resultado():
+    nombre = request.form['nombre']
     email = request.form['email']
-    return render_template('script2resultado.html', email=email)
+    password=request.form['password']
+    sc2=Script2()
+    resultado = sc2.funcion1(nombre,email,password)
+
+    return render_template('script2resultado.html', resultado=resultado)
 
 
 @app.route('/script3')
