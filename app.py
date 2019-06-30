@@ -37,7 +37,7 @@ def script2resultado():
 def script3():
     sc3=Script3()
     resultado=sc3.funcion1()
-    return render_template('inicio.html', resultado=resultado)
+    return render_template('script3.html', resultado=resultado)
 
 @app.route('/script4')
 def script4():

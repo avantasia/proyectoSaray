@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Indice</h1>
-    <p class="important">
-      El resultado es {{  resultado }}
-    </p>
+<div class="jumbotron">
+  <h1 class="display-4">Pruebas de scripts</h1>
+  <p class="lead">Pruebas de ejecución de scripts en python con flask</p>
+  <hr class="my-4">
+  <p>Script 1: Script simple sin parámetros</p>
+    <p>Script 2: Script con parámetros que recibe de un formulario</p>
+    <p>Script 3: Que ejecuta comando del sistema (windows)</p>
+  <a class="btn btn-primary btn-lg" href="/script1" role="button">Empezar con script1</a>
+</div>
+
 {% endblock %}
