@@ -1,6 +1,7 @@
 from flask import *
 from scripts.script1 import *
 from scripts.script2 import *
+from scripts.script3 import *
 
 app = Flask(__name__)
 
@@ -34,8 +35,8 @@ def script2resultado():
 
 @app.route('/script3')
 def script3():
-    sc1=Script1()
-    resultado=sc1.funcion1()
+    sc3=Script3()
+    resultado=sc3.funcion1()
     return render_template('inicio.html', resultado=resultado)
 
 @app.route('/script4')
